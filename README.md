@@ -26,4 +26,5 @@ To proactively contribute to the further development of this concept, future ite
 3. **Advanced Blocks:** Adding logic blocks for form validation (e.g., "If Age < 18, show warning").
 
 ## Live Demo
-Access the live prototype here: [Deploying...]
+Access the live prototype here:  https://withmendel.github.io/visual-form-builder/
+
