@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Bank - Visual Form Builder</title>
+    
+    <!-- Tailwind CSS for rapid UI styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Blockly Library -->
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col font-sans">
+    
+    <!-- Top Navigation Bar -->
+    <header class="bg-green-700 text-white p-4 shadow-md flex justify-between items-center">
+        <h1 class="text-xl font-bold">Internal Tool: Visual Banking Form Builder</h1>
+        <button id="generateBtn" class="bg-green-900 hover:bg-green-800 px-4 py-2 rounded transition">
+            Preview Form
+        </button>
+    </header>
+
+    <!-- Main Workspace Area -->
+    <main class="flex-1 flex flex-row overflow-hidden">
+        
+        <!-- Left Panel: Blockly Layout Designer -->
+        <section class="w-1/2 flex flex-col border-r-4 border-gray-300 bg-white">
+            <div class="bg-gray-200 p-2 border-b-2 border-gray-300 font-semibold text-gray-700">
+                Blockly Layout Designer
+            </div>
+            <!-- FIX: Added 'relative' and 'h-full' to a wrapper div -->
+    <div class="flex-1 relative w-full h-full">
+        <div id="blocklyDiv" class="absolute top-0 bottom-0 left-0 right-0"></div>
+    </div>
+</section>
+
+        <!-- Right Panel: Live Form Preview -->
+        <section class="w-1/2 flex flex-col bg-gray-50">
+            <div class="bg-gray-200 p-2 border-b-2 border-gray-300 font-semibold text-gray-700">
+                Live Front-End Preview
+            </div>
+            <!-- The container where your JavaScript will inject the final HTML form -->
+            <div id="previewArea" class="flex-1 p-8 overflow-y-auto">
+                <div class="bg-white p-6 rounded shadow-sm border border-gray-200 min-h-full">
+                    <p class="text-gray-400 italic mb-4" id="placeholderText">
+                        Your generated banking form will appear here...
+                    </p>
+                    <form id="generatedForm" class="space-y-4"></form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Connect your JavaScript logic -->
+    <script src="app.js"></script>
+</body>
+</html>

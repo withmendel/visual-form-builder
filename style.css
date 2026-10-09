@@ -1,0 +1,13 @@
+/* Ensure the Blockly workspace fills its parent container exactly */
+#blocklyDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Because #blocklyDiv is absolute, its immediate parent must be relative */
+section > div:first-of-type + div {
+    position: relative; 
+}
